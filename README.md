@@ -42,7 +42,7 @@ Contributing to open-source is easy.
 
 1. ### Star and Fork the Repo
 
-   Give a start and ⭐ Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
+   Give a star ⭐ and Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
 
     - Check here [How to fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
