@@ -40,7 +40,7 @@ Hacktoberfest® is open to everyone in our global community. Whether you’re a 
 
 Contributing to open-source is easy.
 
-1. ### Fork the Repo
+1. ### Star and Fork the Repo
 
    Give a start and ⭐ Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
 
