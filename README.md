@@ -83,6 +83,25 @@ And, that's it!
 
 [Click here for detailed explanation](CONTRIBUTING.md)
 
+_ _ _
+## How to Update
+
+In the case when you kept the original repository git history, so you have to update your repo from remote to avoid comflict and update to date your repo with others work. 
+You can always pull and merge updates from the "upstream" repository back into your
+project by running:
+
+```bash
+$ git fetch upstream            # Fetch (upstream) repository
+$ git checkout main             # Switch to the main branch (or, master branch)
+$ git merge upstream/main       # Merge upstream/master into the local branch
+```
+**Or**
+```bash
+$ git checkout main             # Switch to the main branch (or, master branch)
+$ git pull origin main          # Fetch and Merge upstream/master into the local branch
+```
+_ _ _
+
 ## What if my pull requests aren’t accepted?
 
 Even if your pull requests aren’t accepted, they should still count toward your 4 pull requests necessary to earn the shirt. The only exception would be if the project maintainer chooses to mark your pull request as “invalid”. They may do this if they perceive your pull request to be low effort, or if it contains plagiarism.
