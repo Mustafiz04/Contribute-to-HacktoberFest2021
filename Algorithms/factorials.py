@@ -7,7 +7,7 @@ def factorial_recursive(n):
   if n < 2:
     return 1
   else:
-    return n * factorial(n - 1)
+    return n * factorial_recursive(n - 1)
 
 def factorial_iterative(n):
   res = 1
