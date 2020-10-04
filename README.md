@@ -81,7 +81,7 @@ Contributing to open-source is easy.
 
 And, that's it!
 
-[Click here for detailed explanation](/Contribute.md)
+[Click here for detailed explanation](CONTRIBUTING.md)
 
 ## What if my pull requests aren’t accepted?
 
