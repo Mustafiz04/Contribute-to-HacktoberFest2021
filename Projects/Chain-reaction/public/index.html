@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chain Reaction Room</title>
+
+    <style>
+        body {
+            background: rgb(41, 41, 38);
+            display: flex;
+            min-height: 95vh;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        form {
+            width: 80vw;
+            display: flex;
+            padding: -20px;
+            border: 2px solid rgb(31, 109, 211);
+            margin: 12px auto;
+            flex-flow: column;
+            justify-content: center;
+            align-content: center;
+            border-radius: 20px;
+        }
+        input, button {
+            width: 60%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            background: rgba(211, 173, 76, 0);
+            font-size: 15px;
+            color: white;
+        }
+        
+        button {
+            border: 2px solid rgb(31, 109, 211);
+            border-radius: 15px;
+            color: white;
+            width: 40%;
+        }
+        button:hover {
+            background: rgb(97, 158, 238);
+            color: black;
+        }
+       
+        div {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 10px;
+        }
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 10vh;
+            color:#3feef6;
+            text-align: center;
+            padding: 0;
+            margin: 3px;
+        }
+        h4{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:#3feef6;
+            text-align: center;
+            padding: 0;
+            margin: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form-wrap">
+      
+        <form id="room-selector">
+            <h1> Chain Reaction Game</h1>
+            <h4>Number Of Players (Min: 2, Max: 12) </h4>
+            <div>
+                <input type="range" id="players" name="players" min="2" max="12" value="2" />
+            </div>
+            <div>
+                <button type="submit"> Play! </button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function swrite(key, value) {
+            sessionStorage.setItem(key, btoa(value));
+        }
+        let form = document.querySelector("#room-selector");
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            swrite('chrct-players', event.target['players'].value);
+            swrite('chrct-mode', 'graphical');
+            window.location = `/run`;
+        });
+    </script>
+    
+</body>
+</html>
