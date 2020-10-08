@@ -1,0 +1,2 @@
+sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & ActiveWorkbook.FullName & _
+              ";Extended Properties='Excel 12.0;HDR=Yes;IMEX=0;Readonly=False';"
