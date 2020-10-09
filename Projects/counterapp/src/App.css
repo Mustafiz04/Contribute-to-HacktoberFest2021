@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: rgb(10, 19, 19);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  padding: 25px;
+  margin: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: large;
+  border-radius: 25px;
+  background-color: #61dafb;
+}
+button:hover {
+  opacity: 0.7;
+  background-color: aqua;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    text-align: center;
+    font-size: 30px;
+  }
+}
