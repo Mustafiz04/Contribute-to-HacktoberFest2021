@@ -12,8 +12,6 @@ Ever looked at a photo of a big ferocious looking cat with big gnarly teeth and 
   
 ## How To Use:
 
-![ss](Machine Learning Projects/big_cat_classifier/Screenshot (8).png)
-
   1. The testing.ipynb notebook can be used to test images and see the application working properly.
   2. Upload a file using the upload button.
   3. Click on Classify, and Voila!...you have the prediction made by the model along with the model's confidence.
