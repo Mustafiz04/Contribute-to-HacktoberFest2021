@@ -4,3 +4,5 @@
 - [Longest Common Subsequence](longest_common_subsequence.java)
 - [Longest Pallindromic Subsequence](longest_pallindromic_subsequence.java)
 - [Median of Two Sorted Arrays](median_of_two_sorted_arrays.java)
+
+![java](https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Java-icon.png)
