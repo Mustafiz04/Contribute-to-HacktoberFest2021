@@ -1,3 +1,19 @@
+<h1 align="center"> Hacktoberfest-2020</h1>
+
+<img align="center" height=100% width=100% src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg" alt="hacktoberfest2020">
+<p align="center">
+   <img src="https://img.shields.io/badge/author-Mustafiz04-orange">
+   <img src="https://img.shields.io/github/issues/Mustafiz04/Contribute-to-HacktoberFest2020"> 
+   <img src="https://img.shields.io/github/forks/Mustafiz04/Contribute-to-HacktoberFest2020">
+   <img src="https://img.shields.io/github/stars/Mustafiz04/Contribute-to-HacktoberFest2020?color=green">
+   <img src="https://komarev.com/ghpvc/?username=Mustafiz04&color=blue">
+   <img src="https://img.shields.io/github/issues-pr/Mustafiz04/Contribute-to-HacktoberFest2020.svg">
+</p>
+
+**Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest-2020 and make 4 pull requests (PRs) between October 1-31 to earn a free t-shirt.**
+
+***
+
 # Overview
 The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
@@ -16,35 +32,46 @@ Open source is changing the world - one pull request at a time.
 
 - [HacktoberFest-2020](#hacktoberfest-2020)
   - [What is Hacktoberfest?](#what-is-hacktoberfest)
-  - [Why Should I Contribute?](#-why-should-i-contribute)
+  - [Why Should I Contribute?](#why-should-i-contribute)
   - [What Can I Contribute?](#what-can-i-contribute)
   - [How to Contribute in this repo.](#how-to-contribute-in-this-repo)
 
 ## What is Hacktoberfest?
 
-Hacktoberfest is a month long virtual festival event to celebrate open source contributions presented by Digital Ocean and DEV. It is the easiest way to get into open source!
+Hacktoberfest is the easiest way to get into open source! Hacktoberfest is a month long festival of open source code presented by [Digital Ocean](https://www.digitalocean.com/), [Intel](https://hacktoberfest.digitalocean.com/intel.pdf) and [DEV](https://www.dev.to/) this year in 2020.
 
 During the entire month of October 2020, all you have to do is contribute to any open source projects and open at least 4 pull requests. Yes, any project and any kind of contributions.
 
 ## Why Should I Contribute?
 
-The Hacktoberfest’s simple plain objective is:
-Support open source and earn a limited edition T-shirt!
+Hacktoberfest has a simple and plain moto.
+> Support open source and earn a limited edition T-shirt and few stickers!
+
+So, yes! You can win a T-Shirt and few awesome stickers to attach on your laptop. On plus side, you will get into beautiful world of open source and get the international exposure. 
+
 But, it’s not just about the t-shirts or stickers. Its about supporting open source. Its about celebrating open source, and giving it back. If you’ve never contributed to open source before, this is the perfect time to get started because Hacktoberfest provides a large list of available contribution opportunities.
 
 ## What Can I Contribute?
 
-Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake.
+Hacktoberfest&reg; is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake or documentation.
 
 ## How to Contribute in this repo.
 
 Contributing to open-source is easy.
 
 1. ### Star and Fork the Repo
-
-   Give a star ⭐ and Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
-
+		
+   - Feel free to Star:star: the repo, if you like it.
+     <img src="assets/img/mustafiz04_star.png" width="100%" alt="star the repo">
+    
+   - Click on `fork` button in the right corner.It will create a copy of repository in your account.
+     <img src="assets/img/mustafiz04_fork.png" width="100%" alt="fork the repo">
+   
+   - Creating the copy of repository
+     <img src="assets/img/mustafiz04_forking.png" width="100%" alt="forking the repo">
+   
     - Check here [How to fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
+    
 
 2. ### Clone the Repo
 
@@ -75,11 +102,18 @@ Contributing to open-source is easy.
 
 5. ### Push it and Make a PR
 
-    Push it to your repository and Issue a PR(Pull Request) in main repository.
+   - Go to the `Pull requests` section and Click the `New pull request` button.
+     <img src="assets/img/mustafiz04_create_PR.png" alt="Create New PR">
+    
+    - Click the `Create pull request` to compare your copy of the repo with the real one.
+    	<img src="assets/img/mustafiz04_compare_PR.png" alt="Compare PR">
+    
+    - Write a `Title`, `Leave a comment` and click `Create New PR`button to merge the PR.
+	<img src="assets/img/mustafiz04_merge_PR.png" alt="merge PR">
+	And, that's it!
+	
+    New to Open Source? Don't know how to [`Create a Pull Request`](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)? read this documentation.
 
-    - [Push your first code](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
-
-And, that's it!
 
 [Click here for detailed explanation](CONTRIBUTING.md)
 
@@ -111,6 +145,7 @@ Any pull request made to a public repo on GitHub will count. The pull request mu
 
 You can contribute to any open source project hosted on Github.com and contribute anything between October 1 to October 31 midnight in 2020. You will find plenty of issues labeled with hacktoberfest or good-first-issue etc on Github. These will be the simple ones most probably and easy to fix.
 
+Check out [Official Hacktoberfest 2020 page](https://hacktoberfest.digitalocean.com/) for more info.
 
 ---
 ## References
