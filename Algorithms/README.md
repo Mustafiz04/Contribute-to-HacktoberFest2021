@@ -1,3 +1,3 @@
 ## Algorithm
-
-- [factorials (python)](factorials.py)
+****
+![Algorithm](https://i.imgur.com/iaR8SBu.png)
