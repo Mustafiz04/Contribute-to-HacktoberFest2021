@@ -10,7 +10,7 @@
    <img src="https://img.shields.io/github/issues-pr/Mustafiz04/Contribute-to-HacktoberFest2020.svg">
 </p>
 
-**Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest-2020 and make 4 pull requests (PRs) between October 1-31 to earn a free t-shirt.**
+**Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest-2020 and make 4 pull requests (PRs) between October 1-31 to earn a free T-shirt & Stickers.**
 
 ***
 
@@ -146,6 +146,11 @@ Any pull request made to a public repo on GitHub will count. The pull request mu
 You can contribute to any open source project hosted on Github.com and contribute anything between October 1 to October 31 midnight in 2020. You will find plenty of issues labeled with hacktoberfest or good-first-issue etc on Github. These will be the simple ones most probably and easy to fix.
 
 Check out [Official Hacktoberfest 2020 page](https://hacktoberfest.digitalocean.com/) for more info.
+
+### Made with ♥ by <a href="https://github.com/Mustafiz04">Mustafiz04</a>
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Mustafiz04)
+
 
 ---
 ## References
