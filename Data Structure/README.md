@@ -1,3 +1,8 @@
+
+## Data Structure
+
+<img src="../assets/img/Data_Structure.png">
+
 ![Datastructures](https://i.imgur.com/Qycb64x.png)
 > ## Oh you've come so far please do check out the other submissions as well ! 😁
 [Algorithms](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Algorithms)
@@ -15,3 +20,4 @@
 [Machine Learning Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Machine%20Learning%20Projects)
 
 [Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Projects)
+
