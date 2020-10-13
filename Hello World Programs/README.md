@@ -13,7 +13,11 @@
 - [x] Matlab
 - [x] PHP
 - [x] Python                                                                 
-
+- [x] R
+- [x] Ruby
+- [x] Rust
+- [x] SQL
+- [X] TypeScript
 
  
 > ## Oh you've come so far please do check out the other submissions as well ! 😁
