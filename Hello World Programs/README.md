@@ -1,19 +1,23 @@
 ## Hello World Programs
 ![hello](https://i.imgur.com/K0HTz3o.png)
 
-- [x] Python                                                                 
-- [x] PHP
+- [x] Assembly
+- [x] C
+- [x] C++
+- [x] C#
+- [x] Golang
 - [x] HTML
 - [x] Java
 - [x] JavaScript
-- [x] C
-- [x] C++
 - [x] kotlin
-- [x] Golang
-- [x] C#
 - [x] Matlab
-
-
+- [x] PHP
+- [x] Python                                                                 
+- [x] R
+- [x] Ruby
+- [x] Rust
+- [x] SQL
+- [X] TypeScript
 
  
 > ## Oh you've come so far please do check out the other submissions as well ! 😁
