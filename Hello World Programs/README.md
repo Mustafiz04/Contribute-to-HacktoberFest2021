@@ -5,11 +5,13 @@
 - [x] C
 - [x] C++
 - [x] C#
+- [x] Dart
+- [x] Elixir
 - [x] Golang
 - [x] HTML
 - [x] Java
 - [x] JavaScript
-- [x] kotlin
+- [x] Kotlin
 - [x] Matlab
 - [x] PHP
 - [x] Python                                                                 
@@ -17,6 +19,7 @@
 - [x] Ruby
 - [x] Rust
 - [x] SQL
+- [x] Swift
 - [X] TypeScript
 
  
