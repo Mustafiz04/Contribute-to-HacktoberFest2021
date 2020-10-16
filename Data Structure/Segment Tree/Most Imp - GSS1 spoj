@@ -1,0 +1,114 @@
+/**
+ *    author:  accesss_denied
+**/
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ff first
+#define ss second
+#define pb push_back
+#define endl "\n"
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+ll mod=1e9+7;			
+ll inf=1e11;
+
+			struct node{
+				ll prefix;
+				ll suffix;
+				ll total;
+				ll ms;
+			};
+
+			void build(ll id,ll s,ll e,node* seg[],ll arr[])
+			{
+				if(s==e)
+				{
+					seg[id]->ms=arr[s];
+					seg[id]->total=arr[s];
+					seg[id]->prefix=arr[s];
+					seg[id]->suffix=arr[s];
+					return;
+				}
+				ll mid=(s+e)/2;
+				build(2*id,s,mid,seg,arr);
+				build(2*id+1,mid+1,e,seg,arr);
+
+				seg[id]->total=seg[2*id]->total+seg[2*id+1]->total;
+				seg[id]->prefix=max(seg[2*id]->prefix, seg[2*id]->total+seg[2*id+1]->prefix);
+				seg[id]->suffix=max(seg[2*id+1]->suffix, seg[2*id+1]->total+seg[2*id]->suffix);
+				seg[id]->ms=max(seg[2*id]->ms,max(seg[2*id+1]->ms, seg[2*id]->suffix+seg[2*id+1]->prefix));
+			}
+			
+			node query(ll id,ll s,ll e, ll qs,ll qe,node * seg[])
+			{
+				
+				if(qe<s or qs>e)
+				{
+					node temp;
+					temp.total=-inf;
+					temp.ms=-inf;
+					temp.prefix=-inf;
+					temp.suffix=-inf;
+					return temp;
+				}
+				if(qs<=s and qe>=e)
+				{
+					node temp;
+					temp.total=seg[id]->total;
+					temp.ms=seg[id]->ms;
+					temp.prefix=seg[id]->prefix;
+					temp.suffix=seg[id]->suffix;
+					return temp;
+				}
+
+				ll mid=(s+e)/2;
+				node left=query(2*id,s,mid,qs,qe,seg);
+				node right=query(2*id+1,mid+1,e,qs,qe,seg);
+
+				node temp;
+				temp.total=left.total+right.total;
+				temp.prefix=max(left.prefix, left.total+right.prefix);
+				temp.suffix=max(right.suffix, right.total+left.suffix);
+				temp.ms=max(left.ms,max(right.ms, left.suffix+right.prefix));
+
+
+				return temp;
+			}
+
+
+int main() {
+			fast
+			#ifndef ONLINE_JUDGE
+			freopen("input.txt","r",stdin);
+			freopen("output.txt","w",stdout);
+			#endif
+
+			ll n,m;
+			cin>>n;
+			ll arr[n];
+
+			node* seg[4*n+1];
+			for(ll i=1;i<=4*n;i++)
+			{
+				node* temp=new node();
+				seg[i]=temp;
+			}
+			for(ll i=0;i<n;i++)
+			cin>>arr[i];
+			
+			build(1,0,n-1,seg,arr);
+			cin>>m;
+			while(m--)
+			{
+				ll x,y;
+				cin>>x>>y;
+				node xxx;
+				xxx=query(1,0,n-1,x-1,y-1,seg);
+				cout<<xxx.ms<<endl;
+			}
+			
+			
+			return 0;
+		 }	
+
+

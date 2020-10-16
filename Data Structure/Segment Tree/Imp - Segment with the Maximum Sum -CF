@@ -1,0 +1,99 @@
+/**
+ *    author:  accesss_denied
+**/
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ff first
+#define ss second
+#define pb push_back
+#define endl "\n"
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+ll mod=1e9+7;			
+ll inf=1e18;
+
+			struct node{
+				ll prefix;
+				ll suffix;
+				ll total;
+				ll ms;
+			};
+
+			void build(ll id,ll s,ll e,node* seg[],ll arr[])
+			{
+				if(s==e)
+				{
+					seg[id]->ms=arr[s];
+					seg[id]->total=arr[s];
+					seg[id]->prefix=arr[s];
+					seg[id]->suffix=arr[s];
+					return;
+				}
+				ll mid=(s+e)/2;
+				build(2*id,s,mid,seg,arr);
+				build(2*id+1,mid+1,e,seg,arr);
+
+				seg[id]->total=seg[2*id]->total+seg[2*id+1]->total;
+				seg[id]->prefix=max(seg[2*id]->prefix, seg[2*id]->total+seg[2*id+1]->prefix);
+				seg[id]->suffix=max(seg[2*id+1]->suffix, seg[2*id+1]->total+seg[2*id]->suffix);
+				seg[id]->ms=max(seg[2*id]->ms,max(seg[2*id+1]->ms, seg[2*id]->suffix+seg[2*id+1]->prefix));
+			}
+			void update(ll id,ll s,ll e,node* seg[],ll arr[],ll i,ll val)
+			{
+			
+				if(s==e)
+				{
+					seg[id]->ms=val;
+					seg[id]->total=val;
+					seg[id]->prefix=val;
+					seg[id]->suffix=val;
+					return;
+				}
+				ll mid=(s+e)/2;
+				if(i<=mid)
+					update(2*id,s,mid,seg,arr,i,val);
+				else
+					update(2*id+1,mid+1,e,seg,arr,i,val);
+
+				seg[id]->total=seg[2*id]->total+seg[2*id+1]->total;
+				seg[id]->prefix=max(seg[2*id]->prefix, seg[2*id]->total+seg[2*id+1]->prefix);
+				seg[id]->suffix=max(seg[2*id+1]->suffix, seg[2*id+1]->total+seg[2*id]->suffix);
+				seg[id]->ms=max(seg[2*id]->ms,max(seg[2*id+1]->ms, seg[2*id]->suffix+seg[2*id+1]->prefix));
+			}
+
+
+int main() {
+			fast
+			#ifndef ONLINE_JUDGE
+			freopen("input.txt","r",stdin);
+			freopen("output.txt","w",stdout);
+			#endif
+
+			ll n,m;
+			cin>>n>>m;
+			ll arr[n];
+
+			node* seg[4*n+1];
+			for(ll i=1;i<=4*n;i++)
+			{
+				node* temp=new node();
+				seg[i]=temp;
+			}
+			for(ll i=0;i<n;i++)
+			cin>>arr[i];
+
+			build(1,0,n-1,seg,arr);
+			cout<<max(0ll,seg[1]->ms)<<endl;
+			while(m--)
+			{
+				ll x,y;
+				cin>>x>>y;
+				update(1,0,n-1,seg,arr,x,y);
+				cout<<max(0ll,seg[1]->ms)<<endl;
+			}
+			
+			
+			return 0;
+		 }	
+
+

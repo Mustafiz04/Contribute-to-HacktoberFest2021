@@ -1,0 +1,81 @@
+/*
+author: accesss_denied
+*/
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl "\n"
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+ll inf=1e10;
+vector<ll>seg;
+
+		void build(ll id,ll s, ll e,ll arr[])
+		{
+			if(s==e)
+			{
+				seg[id]=arr[s];
+				return ;
+			}
+			ll mid=(s+e)/2;
+			build(2*id,s,mid,arr);
+			build(2*id+1,mid+1,e,arr);
+			seg[id]=seg[2*id]+seg[2*id+1];
+		}
+		ll query(ll id, ll s,ll e,ll k)
+		{
+			if(s==e)
+			return s;
+			ll mid=(s+e)/2;
+			if(seg[2*id]>=k)
+				return query(2*id,s,mid,k);
+			else
+				return query(2*id+1,mid+1,e,k-seg[2*id]);
+		}
+		void update(ll id, ll s,ll e, ll i)
+		{
+			if(s==e)
+			{
+				seg[id]^=1;
+				return ;
+			}
+			ll mid=(s+e)/2;
+			if(i<=mid)
+				update(2*id,s,mid,i);
+			else
+				update(2*id+1,mid+1,e,i);
+			seg[id]=seg[2*id]+seg[2*id+1];
+		}
+
+int main()
+{
+	fast;
+	#ifndef ONLINE_JUDGE
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	#endif
+	ll n,m;
+	cin>>n>>m;
+	seg.assign(4*n+2,0);
+	ll arr[n];
+	for(ll i=0;i<n;i++)
+	cin>>arr[i];
+
+	build(1,0,n-1,arr);
+	
+	while(m--)
+	{
+		ll a,b;
+		cin>>a>>b;
+		if(a==1)
+		{
+			update(1,0,n-1,b);
+		}
+		else
+		{
+			cout<<query(1,0,n-1,b+1)<<endl;
+		}
+		
+	}
+
+	return 0;
+}
