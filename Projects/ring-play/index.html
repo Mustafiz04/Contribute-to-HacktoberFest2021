@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/tone/build/Tone.js"></script>
+        <style>
+
+            body{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            canvas{
+                border: 7px solid black;
+            }
+
+        </style>
+   
+
+</head>
+<body>
+    
+    <canvas id="myCanvas"></canvas>
+   
+
+    <script>
+        var canvas = document.querySelector("#myCanvas");
+        var c = canvas.getContext("2d");
+
+        
+        
+        canvas.width = window.innerWidth / 2;
+        canvas.height = window.innerHeight / 2;
+
+
+        var w = canvas.width; 
+        var h = canvas.height;
+
+
+    
+
+        var xPos = 0; 
+        var yPos = 0;
+        var xSpeed = 5;
+        var ySpeed = 5;
+
+        const synth = new Tone.AMSynth().toDestination();
+        
+
+
+        function drawSquare(ca, x, y, side, color){
+            
+            ca.beginPath();
+            ca.fillStyle = color;
+            ca.fillRect(x,y,side, side);
+            ca.closePath();
+
+        }
+
+        
+        function init(){
+
+
+            xPos = w / 2;
+            yPos = h / 2;
+
+            xPos = w1 / 2;
+            yPos = h1 / 2;
+            
+            draw();
+        }
+
+        function draw(){
+
+            c.clearRect(0, 0, w, h);
+            
+            drawSquare(c, xPos, yPos, 10,  "Blue");
+            
+            
+            
+            update();
+            requestAnimationFrame(draw);
+
+        }
+
+        function update(){
+
+            xPos = xPos + xSpeed;
+            yPos = yPos + ySpeed;
+
+            if (yPos+10 > h){
+                ySpeed *= -1;
+                synth.triggerAttackRelease("G4", "8n");
+                
+            }
+            else if (yPos < 0){
+                ySpeed *= -1;
+                synth.triggerAttackRelease("A3", "8n");
+            }
+
+            if (xPos+10 > w){
+                xSpeed *= -1;
+                synth.triggerAttackRelease("E4", "8n");
+            }
+            else if (xPos < 0){
+                xSpeed *= -1;
+                synth.triggerAttackRelease("F4", "8n");
+            }
+
+        }
+
+
+
+        init();
+    </script>
+
+
+    
+
+
+</body>
+</html>

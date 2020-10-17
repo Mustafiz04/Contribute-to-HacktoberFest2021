@@ -1,0 +1,14 @@
+{
+  "name": "ring-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tone": "^14.7.58"
+  }
+}
