@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Hello World Programs
 ![hello](https://i.imgur.com/K0HTz3o.png)
 
@@ -39,3 +40,6 @@
 [Machine Learning Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Machine%20Learning%20Projects)
 
 [Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Projects)
+=======
+## Hello World Programs
+>>>>>>> 6aabd94f9e13e5d36735a7d16f4d27f7a2ab8080

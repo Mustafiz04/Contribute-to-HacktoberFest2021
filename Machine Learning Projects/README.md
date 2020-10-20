@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Machine Learning Projects
 ![ML](https://i.imgur.com/RXzRain.png)
 > ## Oh you've come so far please do check out the other submissions as well ! 😁
@@ -16,3 +17,6 @@
 [Machine Learning Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Machine%20Learning%20Projects)
 
 [Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Projects)
+=======
+## Machine Learning Projects
+>>>>>>> 6aabd94f9e13e5d36735a7d16f4d27f7a2ab8080
