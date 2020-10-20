@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![Algorithm](https://i.imgur.com/iaR8SBu.png)
 > ## Oh you've come so far please do check out the other submissions as well ! 😁
 [Algorithms](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Algorithms)
@@ -15,3 +16,6 @@
 [Machine Learning Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Machine%20Learning%20Projects)
 
 [Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Projects)
+=======
+## Algorithm
+>>>>>>> 6aabd94f9e13e5d36735a7d16f4d27f7a2ab8080

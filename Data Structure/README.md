@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Data Structure
 
@@ -21,3 +22,6 @@
 
 [Projects](https://github.com/Glitchy-prog/Contribute-to-HacktoberFest2020/tree/main/Projects)
 
+=======
+## Data Structure
+>>>>>>> 6aabd94f9e13e5d36735a7d16f4d27f7a2ab8080
