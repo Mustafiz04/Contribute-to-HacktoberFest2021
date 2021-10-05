@@ -1,16 +1,16 @@
-<h1 align="center"> Hacktoberfest-2020</h1>
+<h1 align="center"> Hacktoberfest-2021</h1>
 
-<img align="center" height=100% width=100% src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg" alt="hacktoberfest2020">
+<img align="center" height=100% width=100% src="https://hacktoberfest.digitalocean.com/assets/HF-full-logo-b05d5eb32b3f3ecc9b2240526104cf4da3187b8b61963dd9042fdc2536e4a76c.svg" alt="hacktoberfest2021">
 <p align="center">
    <img src="https://img.shields.io/badge/author-Mustafiz04-orange">
-   <img src="https://img.shields.io/github/issues/Mustafiz04/Contribute-to-HacktoberFest2020"> 
-   <img src="https://img.shields.io/github/forks/Mustafiz04/Contribute-to-HacktoberFest2020">
-   <img src="https://img.shields.io/github/stars/Mustafiz04/Contribute-to-HacktoberFest2020?color=green">
+   <img src="https://img.shields.io/github/issues/Mustafiz04/Contribute-to-HacktoberFest2021"> 
+   <img src="https://img.shields.io/github/forks/Mustafiz04/Contribute-to-HacktoberFest2021">
+   <img src="https://img.shields.io/github/stars/Mustafiz04/Contribute-to-HacktoberFest2021?color=green">
    <img src="https://komarev.com/ghpvc/?username=Mustafiz04&color=blue">
-   <img src="https://img.shields.io/github/issues-pr/Mustafiz04/Contribute-to-HacktoberFest2020.svg">
+   <img src="https://img.shields.io/github/issues-pr/Mustafiz04/Contribute-to-HacktoberFest2021.svg">
 </p>
 
-**Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest-2020 and make 4 pull requests (PRs) between October 1-31 to earn a free T-shirt & Stickers.**
+**Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest-2021 and make 4 pull requests (PRs) between October 1-31 to earn a free T-shirt & Stickers.**
 
 ***
 
@@ -25,12 +25,12 @@ The goal of this project is to help the beginners with their contributions in Op
 	- Add any graphical game in your favorite programming language!
 
 
-# HacktoberFest-2020
+# HacktoberFest-2021
 
 Open source is changing the world - one pull request at a time. 
 
 
-- [HacktoberFest-2020](#hacktoberfest-2020)
+- [HacktoberFest-2021](#hacktoberfest-2021)
   - [What is Hacktoberfest?](#what-is-hacktoberfest)
   - [Why Should I Contribute?](#why-should-i-contribute)
   - [What Can I Contribute?](#what-can-i-contribute)
@@ -38,9 +38,9 @@ Open source is changing the world - one pull request at a time.
 
 ## What is Hacktoberfest?
 
-Hacktoberfest is the easiest way to get into open source! Hacktoberfest is a month long festival of open source code presented by [Digital Ocean](https://www.digitalocean.com/), [Intel](https://hacktoberfest.digitalocean.com/intel.pdf) and [DEV](https://www.dev.to/) this year in 2020.
+Hacktoberfest is the easiest way to get into open source! Hacktoberfest is a month long festival of open source code presented by [Digital Ocean](https://www.digitalocean.com/), [Intel](https://hacktoberfest.digitalocean.com/intel.pdf) and [DEV](https://www.dev.to/) this year in 2021.
 
-During the entire month of October 2020, all you have to do is contribute to any open source projects and open at least 4 pull requests. Yes, any project and any kind of contributions.
+During the entire month of October 2021, all you have to do is contribute to any open source projects and open at least 4 pull requests. Yes, any project and any kind of contributions.
 
 ## Why Should I Contribute?
 
@@ -143,9 +143,9 @@ Even if your pull requests aren’t accepted, they should still count toward you
 ## What kinds of pull requests count toward earning the Hacktoberfest shirt?
 Any pull request made to a public repo on GitHub will count. The pull request must contain commits you personally made yourself — not automated commits from bots.
 
-You can contribute to any open source project hosted on Github.com and contribute anything between October 1 to October 31 midnight in 2020. You will find plenty of issues labeled with hacktoberfest or good-first-issue etc on Github. These will be the simple ones most probably and easy to fix.
+You can contribute to any open source project hosted on Github.com and contribute anything between October 1 to October 31 midnight in 2021. You will find plenty of issues labeled with hacktoberfest or good-first-issue etc on Github. These will be the simple ones most probably and easy to fix.
 
-Check out [Official Hacktoberfest 2020 page](https://hacktoberfest.digitalocean.com/) for more info.
+Check out [Official Hacktoberfest 2021 page](https://hacktoberfest.digitalocean.com/) for more info.
 
 ### Made with ♥ by <a href="https://github.com/Mustafiz04">Mustafiz04</a>
 
