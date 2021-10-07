@@ -1,0 +1,199 @@
+html{
+    height: 100%;
+    /*background: radial-gradient(circle, white, aqua);*/
+}
+
+body{
+    height: 100%;
+    font-family: sans-serif;
+    background-image: url(../images/maths.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#container {
+    background-color: dodgerblue;
+    height: 413px;
+    width: 600px;
+    margin: 145px auto 0px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px grey;
+    position: relative;
+    transition: 0.3s;
+}
+
+#score {
+    background-color: royalblue;
+/*    height: 35px;
+    width: 70px;*/
+    padding: 10px;
+    color: white;
+    left: 520px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#correct {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    left: 280px;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px white;
+    left: 280px;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+#question {
+    background-color: lightskyblue;
+    height: 135px;
+    width: 400px;
+    margin: 70px auto 15px auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    font-size: 120px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: auto;
+}
+
+#instruction {
+    background-color: azure;
+    height: 35px;
+    width: 400px;
+    margin: 0px auto 15px auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    color: dodgerblue;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 0px 0px 0px;
+}
+
+#choices {
+    display: flex;
+    width: 400px;
+    margin: auto;
+    height: 93px;
+}
+
+.box {
+    height: 90px;
+    width: 93px;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    margin: 0px auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    color: dodgerblue;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    line-height: 90px
+}
+
+.box:hover {
+    background-color: lightgray;
+    color: dodgerblue;
+    box-shadow: 0px 2.5px 0px white;
+}
+
+.box:active {
+    box-shadow: 0px 0px 0px white;
+    top: 2.5px;
+}
+
+#startReset {
+    margin: 10px auto;
+    line-height: 35px;
+    width: 160px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;
+    color: dodgerblue;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;  
+}
+
+#startReset:hover {
+    background-color: lightskyblue;
+    color: dodgerblue;
+    box-shadow: 0px 2.5px 0px white;
+}
+
+#startReset:active {
+    box-shadow: 0px 0px 0px white;
+    top: 2.5px;
+}
+
+#timeRemaining {
+    position: absolute;
+    top: 397px;
+    left: 450px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+/*    border-radius: 5px;
+    box-shadow: 0px 2px 0px grey;*/
+    text-shadow: -1px 2px 0px royalblue;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+#gameOver {
+   position: relative;
+    background-color: dodgerblue;
+    height: 90px;
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px grey;
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: -2px 2.5px 0px royalblue;
+    transition: 0.3s;
+    display: none;
+}
+
+#gameOver p{
+    padding: 0px;
+    margin: 0px;
+}
