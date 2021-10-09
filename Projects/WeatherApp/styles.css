@@ -1,0 +1,10 @@
+.screenContainer{
+    background-color:lightcyan;
+}
+.mainHeader{
+    font-size:80px; 
+    font-weight:bold;
+}
+.inputContainer{
+    padding:30px;
+}
