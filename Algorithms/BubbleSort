@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void BubbleSort(int [], int);
+void FillArray(int [], int);
+void PrintArray(int [], int);
+void InsertionSort(int [], int);
+
+int main(){
+int A[300];
+int max;
+printf("How many values do you want to sort?\n");
+scanf("%d", &max);
+FillArray(A, max);
+PrintArray(A,max);
+InsertionSort(A,max);
+
+PrintArray(A,max);
+
+  return 0;
+}
+
+
+void FillArray(int A[], int max){
+  int i;
+  for(i=0;i<max;i++){
+    A[i]=rand() %10;
+  }
+
+  return;
+}
+
+void BubbleSort(int array[], int elemN)
+{
+  int i, tmp, last;
+  int highest=elemN; 
+  last=highest;
+  while (highest >= 0) 
+    {
+        last = -1;
+        for (i=0; i<highest-1; i++) 
+        {
+          if (array[i]>array[i+1]) 
+          {
+            tmp = array[i];
+            array[i] = array[i+1];
+            array[i+1] = tmp;
+            last = i;
+          }
+        }
+    highest = last;
+    }
+}
+void InsertionSort(int x[], int n)
+{
+   int i, j, app;
+
+   for (i = 1; i < n; i++)
+   {
+      app = x[i];
+
+      for (j = i - 1; (j >= 0) && (x[j] > app); j--)
+               x[j+1] = x[j];
+
+      x[j + 1] = app;
+   }
+}
+void PrintArray(int A[], int max){
+  int i;
+  for(i=0;i<max;i++){
+    printf("%d ", A[i]);
+
+}
+printf("\n");
+  return;
+}
