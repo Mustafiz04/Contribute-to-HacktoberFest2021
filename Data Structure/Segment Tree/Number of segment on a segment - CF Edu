@@ -1,0 +1,125 @@
+/*
+author: accesss_denied
+*/
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl "\n"
+#define ff  first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+ll inf=1e10;
+vector<pair<ll,ll>>seg;
+
+		void build(ll id,ll s, ll e,ll arr[])
+		{
+			if(s==e)
+			{
+				seg[id]={arr[s],1};
+				return ;
+			}
+			ll mid=(s+e)/2;
+			build(2*id,s,mid,arr);
+			build(2*id+1,mid+1,e,arr);
+			if(seg[2*id].ff<seg[2*id+1].ff)
+			{
+				seg[id].ff=seg[2*id].ff;
+				seg[id].ss=seg[2*id].ss;
+			}
+			else if(seg[2*id].ff==seg[2*id+1].ff)
+			{
+				seg[id].ff=seg[2*id+1].ff;
+				seg[id].ss=seg[2*id].ss+seg[2*id+1].ss;
+			}
+			else
+			{
+				seg[id].ff=seg[2*id+1].ff;
+				seg[id].ss=seg[2*id+1].ss;
+			}
+		}
+		pair<ll,ll> query(ll id, ll s,ll e, ll qs,ll qe)
+		{
+			if(qs>e or qe<s)
+				return {inf,0};
+			if(qs<=s and qe>=e)
+				return {seg[id].ff,seg[id].ss};
+			ll mid=(s+e)/2;
+			pair<ll,ll>left=query(2*id,s,mid,qs,qe);
+			pair<ll,ll>right=query(2*id+1,mid+1,e,qs,qe);
+			if(left.ff<right.ff)
+			{
+				return {left.ff,left.ss};
+			}
+			else if(left.ff==right.ff)
+			{
+				return {left.ff,left.ss+right.ss};
+			}
+			else
+			{
+				return {right.ff,right.ss};
+			}
+		}
+		void update(ll id, ll s,ll e, ll i,ll val)
+		{
+			if(s==e)
+			{
+				seg[id].ff=val;
+				seg[id].ss=1;
+				return ;
+			}
+			ll mid=(s+e)/2;
+			if(i<=mid)
+				update(2*id,s,mid,i,val);
+			else
+				update(2*id+1,mid+1,e,i,val);
+			if(seg[2*id].ff<seg[2*id+1].ff)
+			{
+				seg[id].ff=seg[2*id].ff;
+				seg[id].ss=seg[2*id].ss;
+			}
+			else if(seg[2*id].ff==seg[2*id+1].ff)
+			{
+				seg[id].ff=seg[2*id+1].ff;
+				seg[id].ss=seg[2*id].ss+seg[2*id+1].ss;
+			}
+			else
+			{
+				seg[id].ff=seg[2*id+1].ff;
+				seg[id].ss=seg[2*id+1].ss;
+			}
+		}
+
+int main()
+{
+	fast;
+	#ifndef ONLINE_JUDGE
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	#endif
+	ll n,m;
+	cin>>n>>m;
+	seg.resize(4*n+2);
+	ll arr[n];
+	for(ll i=0;i<n;i++)
+	cin>>arr[i];
+
+	build(1,0,n-1,arr);
+	
+	while(m--)
+	{
+		ll a,b,c;
+		cin>>a>>b>>c;
+		if(a==1)
+		{
+			update(1,0,n-1,b,c);
+		}
+		else
+		{
+			pair<ll,ll>ans=query(1,0,n-1,b,c-1);
+			cout<<ans.ff<<" "<<ans.ss<<endl;
+		}
+		
+	}
+
+	return 0;
+}

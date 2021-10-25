@@ -1,0 +1,18 @@
+->This algo is used to find the maximum sum subarray of a given array having both negative and positive elements
+->It assumes that there is atleast one positivee value in the array
+->Algorithm:
+	:First,we initialize the array sum zero.
+	:Then traversing along the array we check for condition that whether the sum if greater than zero or not.
+	:if yes,we add it otherwise we initialize it to zero
+->CPP CODE
+int max_sum_subarray(int arr[n],int n)
+{
+	int ans=0,sum=0;
+	for(int i=0;i<n;i++)
+	{
+		if(sum+arr[i]>0) sum+=arr[i];
+		else sum=0;
+		ans=max(ans,sum);
+	}	
+	return ans;
+}

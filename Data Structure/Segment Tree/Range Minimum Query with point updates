@@ -1,0 +1,107 @@
+/**
+ *    author:  accesss_denied
+**/
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ff first
+#define ss second
+#define pb push_back
+#define endl "\n"
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+ll mod=1e9+7;	
+ll inf=1e18;
+vector<ll>seg;		
+
+			void build(ll index, ll start, ll end, ll arr[])
+			{
+				if(start==end)
+				{
+					seg[index]=arr[start];
+					return;
+				}
+				//apply postorder tree traversal and build tree for every node
+				//call left subtree, then right then build the root node
+				ll mid=(start+end)/2;
+
+				build(2*index,start,mid,arr); //left recursive call
+				build(2*index+1,mid+1,end,arr); //right recursive call
+
+				seg[index]=min(seg[2*index],seg[2*index+1]); //calculating value at root node
+			}
+
+			ll query(ll index,ll start,ll end, ll qstart, ll qend)
+			{
+				//no overlap
+				if(qstart>end or qend<start)
+				return inf;
+				
+				//complete overlap
+				if(qstart<=start and qend>=end)
+				return seg[index];
+
+				//partial overlap
+				ll mid=(start+end)/2;
+
+				ll left=query(2*index,start,mid,qstart,qend);
+				ll right=query(2*index+1,mid+1,end,qstart,qend);
+
+				return min(left,right);
+			}
+
+			void update(ll index,ll start,ll end,ll id,ll val)
+			{
+				//out of bound
+				if(id>end or id<start)
+				return ;
+
+				//complete overlap
+				if(start==end)
+				{
+					seg[index]=val;
+					return;
+				}
+
+				//partial overlap
+				ll mid=(start+end)/2;
+
+				update(2*index,start,mid,id,val);
+				update(2*index+1,mid+1,end,id,val);
+
+				seg[index]=min(seg[2*index],seg[2*index+1]);
+			}
+	   
+int main() {
+			fast
+		
+			ll n,q;
+			cin>>n>>q;
+			ll arr[n];
+			seg.assign(4*n+1,0);
+
+			for(ll i=0;i<n;i++)
+			cin>>arr[i];
+
+			build(1,0,n-1,arr);
+			while(q--)
+			{
+				char a;
+				ll b,c;
+				cin>>a>>b>>c;
+				if(a=='q')
+				{
+					cout<<query(1,0,n-1,b-1,c-1)<<endl;
+				}
+				else
+				{
+					update(1,0,n-1,b-1,c);
+				}
+				
+			}
+
+
+		
+			return 0;
+		 }	
+
+

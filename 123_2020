@@ -1,0 +1,22 @@
+import java.util.*;
+class binary
+{
+    public static int recbin(int n, String s)
+    {
+        if(n==0)
+        return(Integer.parseInt(s));
+        else
+        {
+            s=Integer.toString(n%2)+s;
+            return(recbin(n/2,s));
+        }
+    }
+    public static void main()
+    {
+        Scanner in =new Scanner(System.in);
+        System.out.println("Enter a decimal number to be converted into binary ");
+        int num=in.nextInt();
+        int res=recbin(num,"");
+        System.out.println("Binary equivalent of decimal number=\t"+res);
+    }
+}

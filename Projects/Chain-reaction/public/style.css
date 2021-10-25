@@ -1,0 +1,421 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Root related */
+
+#root {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: black;
+    /*width: 100vw;*/
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* Modal related */
+
+#modal {
+    display: none;
+}
+
+/* Alert related */
+
+#alerts {
+    display: none;
+    position: fixed;
+    height: 80px;
+    width: 150px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    z-index: 0;
+}
+
+#alert-text {
+    height: 20px;
+}
+
+#alert-text span {
+    text-align: center;
+    margin: auto;
+    line-height: 20px;
+}
+
+.danger {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.success {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+.info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
+
+/* Grid */
+
+#grid-wrap {
+    margin: 0 auto;
+    width: 100vw;
+    /*resize: vertical;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#grid {
+    background-color: rgb(20, 20, 20);
+    display: table;
+    border: 2px solid rgb(100, 100, 100);
+    height: auto;
+    overflow: auto;
+    border-collapse: collapse;
+    margin: 5px auto;
+    table-layout: fixed;
+}
+
+.grid-row {
+    height: 66px;
+}
+
+.grid-column {
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    width: 66px;
+    text-align: center;
+    cursor: pointer;
+    font-family: monospace;
+    position: relative;
+    transition: all 0.8s;
+}
+
+.grid-column:hover {
+    background: #202020;
+}
+
+.grid-column div {
+    display: flex;
+    flex-shrink: 8;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-column div span {
+    text-align: center;
+    width: 100%;
+}
+
+/* Particle/orb related */
+.circle {
+	display: block;
+	background: black;
+	border-radius: 50%;
+	margin: 1px;
+	z-index: 0;
+	/*position: absolute;*/
+}
+
+.ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+}
+
+.red-sphere {
+	background: radial-gradient(circle at 100px 100px, red, #555555);
+}
+
+.green-sphere {
+    background: radial-gradient(circle at 100px 100px, green, #555555);
+}
+
+.blue-sphere {
+	background: radial-gradient(circle at 100px 100px, blue, #555555);
+}
+
+.yellow-sphere {
+    background: radial-gradient(circle at 100px 100px, yellow, #555555);
+}
+
+.cyan-sphere {
+    background: radial-gradient(circle at 100px 100px, cyan, #555555);
+}
+
+.magenta-sphere {
+    background: radial-gradient(circle at 100px 100px, magenta, #555555);
+}
+
+.white-sphere {
+    background: radial-gradient(circle at 100px 100px, white, #555555);
+}
+
+.violet-sphere {
+    background: radial-gradient(circle at 100px 100px, violet, #555555);
+}
+
+.slateblue-sphere {
+    background: radial-gradient(circle at 100px 100px, slateblue, #555555);
+}
+
+.tomato-sphere {
+    background: radial-gradient(circle at 100px 100px, tomato, #555555);
+}
+
+.dodgerblue-sphere {
+    background: radial-gradient(circle at 100px 100px, dodgerblue, #555555);
+}
+
+.lightgray-sphere {
+    background: radial-gradient(circle at 100px 100px, lightgray, #555555);
+}
+
+.one-p {
+	width: 30px;
+	height: 30px;
+}
+
+.two-p {
+	width: 25px;
+	height: 25px;
+}
+
+.three-p {
+	width: 23px;
+	height: 23px;
+}
+
+/* Shaking animation */
+.slow-shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 2.2s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* Settings related */
+
+#settings {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: yellow;
+    outline: none;
+    font-family: monospace;
+}
+
+.button:hover {
+    background: lightgrey;
+}
+
+#turn-info {
+    padding: 10px;
+    font-family: monospace;
+}
+
+.undo {
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    width: 130px;
+    border-radius: 25px;
+    text-decoration: none;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+    transition: background-color 0.8s, color 0.8s;
+    -webkit-transition: background-color 0.8s, color 0.8s;
+    -moz-transition: background-color 0.8s, color 0.8s;
+    -o-transition: background-color 0.8s, color 0.8s;
+}
+
+.undo:hover {
+    background-color: #3c213c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Chatbox related */
+
+#chatbox {
+    min-height: 100px;
+    box-sizing: border-box;
+    background: whitesmoke;
+    padding: 20px;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-shrink: 3;
+    position: relative;
+    overflow: auto;
+}
+
+#chat-list-wrap {
+    width: 68%;
+    height: 150px;
+    margin: 0;
+    position: relative;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#chat-list {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    list-style: none;   
+    padding: 0 0 0 0;
+}
+
+/*#chat-list li {
+    text-decoration: none;
+}*/
+
+#chat-input-wrap {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 3;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#chat-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid dodgerblue;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.receipt-cont {
+    margin-bottom: 1px;
+}
+
+.receipt {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    background-color: lightgrey;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.not-my-msg-cont {
+    margin-top: 8px;
+    margin-bottom: 3px;
+    word-wrap: break-word;
+}
+
+.not-my-msg {
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    /*border-bottom: white solid 1px;*/
+}
